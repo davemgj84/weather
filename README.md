@@ -96,5 +96,6 @@ Thank you for your time and consideration in this matter. I really look forward 
 
 ## Screenshots
 
-![Weather]()
-![Weather-Vancouver]()
+![Weather](https://github.com/davemgj84/weather/blob/master/docs/weather.png?raw=true)
+
+![Weather-Vancouver](https://github.com/davemgj84/weather/blob/master/docs/Vancouver-Weather.png?raw=true)
