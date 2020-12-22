@@ -242,33 +242,33 @@ main {
   }
 }
 
-@media screen and (max-height: 420px) {
-  main {
-    flex-direction: row;
-    justify-content: space-evenly;
+// @media screen and (max-height: 420px) {
+//   main {
+//     flex-direction: row;
+//     justify-content: space-evenly;
 
-    h1 {
-      color: rgba(30, 61, 99, 1);
-    }
-    h2 {
-      color: rgba(30, 61, 99, 1);
-    }
+//     h1 {
+//       color: rgba(30, 61, 99, 1);
+//     }
+//     h2 {
+//       color: rgba(30, 61, 99, 1);
+//     }
 
-    #info-container {
-      height: 250px;
-    }
-    .location-box {
-      .location {
-        font-size: 1.5rem;
-      }
-    }
-    .weather-box {
-      .temp {
-        font-size: 2rem;
-      }
-      .feels-like {
-        font-size: 1rem;
-      }
-    }
-  }
-}
+//     #info-container {
+//       height: 250px;
+//     }
+//     .location-box {
+//       .location {
+//         font-size: 1.5rem;
+//       }
+//     }
+//     .weather-box {
+//       .temp {
+//         font-size: 2rem;
+//       }
+//       .feels-like {
+//         font-size: 1rem;
+//       }
+//     }
+//   }
+// }
