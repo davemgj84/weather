@@ -11,6 +11,7 @@ main {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 3rem;
+    line-height: 3.5rem;
     letter-spacing: 0.8rem;
     margin-top: 2rem;
     text-shadow: 0 3px rgba(0, 0, 0, 0.2);
@@ -23,11 +24,14 @@ main {
     font-weight: normal;
     font-size: 2.5rem;
     letter-spacing: 0.25rem;
-    margin-top: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
     text-shadow: 0 3px rgba(0, 0, 0, 0.2);
   }
 
   .search {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     .search-bar {
       width: 400px;
       padding: 0.8rem;
@@ -54,7 +58,7 @@ main {
   }
 
   .info-container {
-    background-color: rgba(30, 61, 99, 0.3);
+    background-color: rgba(30, 61, 99, 0.5);
     padding: 2rem;
     border-radius: 4rem;
   }

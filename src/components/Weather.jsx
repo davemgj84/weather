@@ -23,6 +23,7 @@ const Weather = () => {
     <>
       <main>
         <h1>Thinkific</h1>
+        <h2>Weather</h2>
         <div className="search">
           <input
             type="text"
@@ -33,25 +34,20 @@ const Weather = () => {
             onKeyPress={search}
           />
         </div>
-        <h2>Weather</h2>
         {weather.city !== undefined ? (
-          <div>
-            <div className="info-container">
-              <div className="location-box">
-                <div className="location">
-                  {weather.city}, {weather.country}
-                </div>
-                <div className="date">{currentDate(new Date())}</div>
+          <div className="info-container">
+            <div className="location-box">
+              <div className="location">
+                {weather.city}, {weather.country}
               </div>
-              <div className="weather-box">
-                <div className="temp">{weather.temperature}°c</div>
-                <div className="weather">{weather.conditions}</div>
-                <div className="feels-like">
-                  Feels Like {weather.feelsLike}°c
-                </div>
-                <div className="high-low">
-                  {weather.high}°c / {weather.low}°c
-                </div>
+              <div className="date">{currentDate(new Date())}</div>
+            </div>
+            <div className="weather-box">
+              <div className="temp">{weather.temperature}°c</div>
+              <div className="weather">{weather.conditions}</div>
+              <div className="feels-like">Feels Like {weather.feelsLike}°c</div>
+              <div className="high-low">
+                {weather.high}°c / {weather.low}°c
               </div>
             </div>
           </div>
