@@ -22,7 +22,7 @@ const Weather = () => {
 
   return (
     <>
-      <main>
+      <section>
         <div className="header-search">
           <h1>Thinkific</h1>
           <h2>Weather</h2>
@@ -54,7 +54,7 @@ const Weather = () => {
             </div>
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 };
