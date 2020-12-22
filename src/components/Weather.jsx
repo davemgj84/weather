@@ -11,7 +11,7 @@ const Weather = () => {
   const search = (evt) => {
     if (evt.key === "Enter") {
       axios
-        .get(`/api/weather/${query}`)
+        .get(`https://think-weather.herokuapp.com/api/weather/${query}/`)
         .then((response) => response.data)
         .then((result) => {
           setQuery("");
