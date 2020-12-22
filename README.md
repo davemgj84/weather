@@ -93,3 +93,8 @@ This repository has been deployed on HEROKU here:
 I really enjoyed this technical challenge. I found I learned a lot about as I developed this application, and feel like it is a well rounded challenge, that allows people to create and develop freely. It has a decent amount of stretch that I feel allows people to further showcase their skills.
 
 Thank you for your time and consideration in this matter. I really look forward to hearing from you and participating in the next part of the hiring process.
+
+## Screenshots
+
+![Weather]()
+![Weather-Vancouver]()
