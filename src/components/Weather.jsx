@@ -8,10 +8,6 @@ const Weather = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
-  if (process.env.REACT_APP_API_BASE_URL) {
-    axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
-  }
-
   const search = (evt) => {
     if (evt.key === "Enter") {
       axios
