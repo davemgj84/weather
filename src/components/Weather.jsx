@@ -16,6 +16,9 @@ const Weather = () => {
         .then((result) => {
           setQuery("");
           setWeather(result);
+        })
+        .catch((err) => {
+          console.log("Could not find current weather data", err);
         });
     }
   };

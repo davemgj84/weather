@@ -73,6 +73,8 @@ Navigate to the Backend repository, "weather-api", here:
 
 - There is a .env.example file that contains the format for the environment variables needed to run this application. The only variable left blank, it the API_KEY. Please input your personal key if you wish to test this application via cURL or postman.
 
+- If you would like to use an API key and test locally with cURL or postman: When the server is running on Port 8080, use this URL to search for current weather ( with cURL/Postman) - http://localhost:8080/api/weather/Vancouver - Vancouver can be switched out for any city, and you will recieve the appropriate JSON weather data.
+
 - NOTE - the deployed applications (both frontend and back, do not require an API key to run. Just visit the sites and they work as intended).
 
 - Dependencies include:
