@@ -11,11 +11,28 @@ const Weather = () => {
   const search = (evt) => {
     if (evt.key === "Enter") {
       axios
-        .get(`https://think-weather.herokuapp.com/api/weather/${query}/`)
-        .then((response) => response.data)
-        .then((result) => {
+        .get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API}`
+        )
+        .then((response) => {
+          const city = response.data.name;
+          const country = response.data.sys.country;
+          const conditions = response.data.weather[0].main;
+          const temperature = Math.round(response.data.main.temp);
+          const low = Math.round(response.data.main.temp_min);
+          const high = Math.round(response.data.main.temp_max);
+          const feelsLike = Math.round(response.data.main.feels_like);
+          const results = {
+            city,
+            country,
+            conditions,
+            temperature,
+            feelsLike,
+            low,
+            high,
+          };
           setQuery("");
-          setWeather(result);
+          setWeather(results);
         })
         .catch((err) => {
           console.log("Could not find current weather data", err);
@@ -27,7 +44,7 @@ const Weather = () => {
     <>
       <section>
         <div className="header-search">
-          <h1>Thinkific</h1>
+          <h1>Current</h1>
           <h2>Weather</h2>
           <div className="search">
             <input
