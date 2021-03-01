@@ -1,4 +1,4 @@
-# Current Weather App
+# Weather App
 
 A Front-End Weather App created with React, Scss, and Axios. The app connects to the OpenWeather API, which provides real-time weather data to the user.
 

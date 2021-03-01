@@ -16,21 +16,14 @@ const FindWeather = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API}`
       )
       .then((response) => {
-        const city = response.data.name;
-        const country = response.data.sys.country;
-        const conditions = response.data.weather[0].main;
-        const temperature = Math.round(response.data.main.temp);
-        const low = Math.round(response.data.main.temp_min);
-        const high = Math.round(response.data.main.temp_max);
-        const feelsLike = Math.round(response.data.main.feels_like);
         const results = {
-          city,
-          country,
-          conditions,
-          temperature,
-          feelsLike,
-          low,
-          high,
+          city: response.data.name,
+          country: response.data.sys.country,
+          conditions: response.data.weather[0].main,
+          temperature: Math.round(response.data.main.temp),
+          feelsLike: Math.round(response.data.main.feels_like),
+          low: Math.round(response.data.main.temp_min),
+          high: Math.round(response.data.main.feels_like),
         };
         setQuery("");
         setWeather(results);
