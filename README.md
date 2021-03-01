@@ -6,7 +6,7 @@ A Front-End Weather App created with React, Scss, and Axios. The app connects to
 
 The application is deployed on Netlify and can be visited here:
 
-- https://think-weather.netlify.app/
+- https://current-weather-by-dj.netlify.app/
 
 # Instructions to run locally:
 
@@ -28,10 +28,10 @@ Once dependencies have been installed, and you have acquired your own OMDB API k
 
 Of course you may also just visit the deployed application on Netlify here:
 
-- https://think-weather.netlify.app/
+- https://current-weather-by-dj.netlify.app/
 
 # Screenshots
 
-![Weather](https://github.com/davemgj84/weather/blob/master/docs/weather.png?raw=true)
+![Weather]()
 
-![Weather-Vancouver](https://github.com/davemgj84/weather/blob/master/docs/Vancouver-Weather.png?raw=true)
+![Weather-Vancouver]()
