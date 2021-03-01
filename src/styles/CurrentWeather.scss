@@ -1,0 +1,73 @@
+#info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 420px;
+  background-color: rgba(30, 61, 99, 0.5);
+  padding: 2rem;
+  border-radius: 4rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s;
+  .location-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .location {
+      font-size: 2.5rem;
+      text-shadow: 0 3px rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+    }
+
+    .date {
+      font-size: 1.5rem;
+      text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+    }
+  }
+
+  .weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .temp {
+      font-size: 4rem;
+      text-shadow: 0 3px rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+    }
+    .feels-like {
+      font-size: 1.5rem;
+      text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+    }
+    .weather {
+      font-size: 2rem;
+      text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+    }
+    .high-low {
+      font-size: 1.5rem;
+      text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+.placeholder {
+  height: 420px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
