@@ -32,6 +32,6 @@ Of course you may also just visit the deployed application on Netlify here:
 
 # Screenshots
 
-![Weather]()
+![Weather](https://github.com/davemgj84/weather/blob/master/docs/Home.png?raw=true)
 
-![Weather-Vancouver]()
+![Weather-Vancouver](https://github.com/davemgj84/weather/blob/master/docs/Vancouver.png?raw=true)
