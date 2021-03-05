@@ -8,13 +8,18 @@
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.75s;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  height: 40px;
   p {
     font-weight: bold;
     letter-spacing: 1px;
     color: #ff3232;
     margin-bottom: 0.25rem;
   }
+}
+.error-placeholder {
+  margin-top: 1rem;
+  height: 40px;
 }
 
 @keyframes fadeIn {

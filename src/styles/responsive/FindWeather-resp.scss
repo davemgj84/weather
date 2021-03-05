@@ -26,6 +26,9 @@
         border-radius: 0 0.5rem 0.5rem 0;
       }
     }
+    .weather-placeholder {
+      height: 360px;
+    }
   }
 }
 
@@ -53,6 +56,9 @@
         padding: 3px 12px 3px 12px;
         border-radius: 0 0.4rem 0.4rem 0;
       }
+    }
+    .weather-placeholder {
+      height: 320px;
     }
   }
 }

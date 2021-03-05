@@ -59,10 +59,11 @@ const FindWeather = () => {
               <i className="fas fa-search"></i>
             </button>
           </form>
+          {!error && <div className="error-placeholder"></div>}
           {error && <ErrorComponent />}
         </div>
         {weather && <CurrentWeather show={show} weather={weather} />}
-        {!show && <div className="placeholder"></div>}
+        {!show && <div className="weather-placeholder"></div>}
       </section>
     </>
   );
