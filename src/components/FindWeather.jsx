@@ -3,11 +3,13 @@ import axios from "axios";
 import "../styles/FindWeather.scss";
 import "../styles/responsive/FindWeather-resp.scss";
 import CurrentWeather from "./CurrentWeather";
+import ErrorComponent from "./ErrorComponent";
 
 const FindWeather = () => {
   const [query, setQuery] = useState("");
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState(null);
   const [show, setShow] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleRequest = (evt) => {
     evt.preventDefault();
@@ -16,7 +18,11 @@ const FindWeather = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API}`
       )
       .then((response) => {
-        const results = {
+        console.log(response.statusText);
+        if (!response.statusCheck === "OK") {
+          throw Error("Sorry, we could not fetch that data");
+        }
+        const data = {
           city: response.data.name,
           country: response.data.sys.country,
           conditions: response.data.weather[0].main,
@@ -26,11 +32,12 @@ const FindWeather = () => {
           high: Math.round(response.data.main.feels_like),
         };
         setQuery("");
-        setWeather(results);
+        setWeather(data);
+        setError(null);
         setShow(true);
       })
       .catch((err) => {
-        console.log(console.log("Could not find current weather data"), err);
+        setError(err.message);
       });
   };
 
@@ -52,18 +59,10 @@ const FindWeather = () => {
               <i className="fas fa-search"></i>
             </button>
           </form>
+          {error && <ErrorComponent />}
         </div>
-        <CurrentWeather
-          show={show}
-          setShow={setShow}
-          city={weather.city}
-          country={weather.country}
-          temperature={weather.temperature}
-          conditions={weather.conditions}
-          feelsLike={weather.feelsLike}
-          high={weather.high}
-          low={weather.low}
-        />
+        {weather && <CurrentWeather show={show} weather={weather} />}
+        {!show && <div className="placeholder"></div>}
       </section>
     </>
   );
