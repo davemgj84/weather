@@ -5,7 +5,7 @@ import "../styles/responsive/ErrorComponent-resp.scss";
 const ErrorComponent = () => {
   return (
     <div className="error-message">
-      <p>Try Again - "City" or "City, Country"</p>
+      <p>Please Enter "City" or "City, Country"</p>
     </div>
   );
 };
