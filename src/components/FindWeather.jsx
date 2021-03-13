@@ -18,8 +18,8 @@ const FindWeather = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API}`
       )
       .then((response) => {
-        console.log(response.statusText);
-        if (!response.statusCheck === "OK") {
+        console.log(response);
+        if (response.status !== 200) {
           throw Error("Sorry, we could not fetch that data");
         }
         const data = {
@@ -37,6 +37,7 @@ const FindWeather = () => {
         setShow(true);
       })
       .catch((err) => {
+        setQuery("");
         setError(err.message);
       });
   };
@@ -59,8 +60,11 @@ const FindWeather = () => {
               <i className="fas fa-search"></i>
             </button>
           </form>
-          {!error && <div className="error-placeholder"></div>}
-          {error && <ErrorComponent />}
+          {error ? (
+            <ErrorComponent />
+          ) : (
+            <div className="error-placeholder"></div>
+          )}
         </div>
         {weather && <CurrentWeather show={show} weather={weather} />}
         {!show && <div className="weather-placeholder"></div>}
